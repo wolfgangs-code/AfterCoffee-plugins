@@ -1,5 +1,6 @@
 <?php
 class vanillaTilt {
+	const version = '1.0';
 	function changeText($html) {
 		$html = preg_replace("/(\[card\])(.*?)(\[\/card\])/", "<div style=\"display: inline-block\"data-tilt data-tilt-glare data-tilt-max-glare=\"0.8\" data-tilt-scale=\"1.1\">$2</div>", $html);
 		return $html;

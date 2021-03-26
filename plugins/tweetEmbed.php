@@ -4,6 +4,7 @@
 	# with full HTML embeds.                                    #
 	#===========================================================#
 class tweetEmbed {
+	const version = '1.0';
 	function addHead() {
 		print("<meta name=\"twitter:widgets:border-color\" content=".USERSET["themeColor"].">");
 	}
