@@ -1,2 +1,21 @@
-# AfterCoffee-plugins
- A large collection of everyday-use to niche plugins for AfterCoffee
+![AfterCoffee Plugins](https://wolfgang.space/assets/github/aftercoffee.png)
+
+# AfterCoffee Plugins
+### Current Plugins
+
+- **Tweet Embed**
+  - Turns linked Tweets into full embeds
+  - Obeys AfterCoffee dark/light mode settings
+  - *Example Inline Usage:*
+    - `[I love Nelson!](https://twitte.com/PupperNelson/status/1375532883264294912)`
+- **Spotify Embed**
+  - Turns Spotify URIs into full embeds
+  - Best for songs, but can handle albums, playlists, artists, etc.
+  - Only small embeds *(for now!)*
+  - *Example Inline Usage:*
+    - `spotify:track:7EaL8Zt8UAabmP6sQydgx9`
+- **vanilla-tilt**
+  - Allows use of the [vanilla-tilt.js library](https://micku7zu.github.io/vanilla-tilt.js/)
+  - Works on any image tag
+  - *Example Inline Usage:*
+    - `[card]![Alt-Text](your-card-image.png)[/card]`
