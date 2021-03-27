@@ -3,6 +3,11 @@
 # AfterCoffee Plugins
 ### Current Plugins
 
+- **Google Analytics**
+  - Instantly adds Google Analytics tracking to your site
+  - **Requires editing meta.json**
+    - In `pluginSetting`, create the `googleAnalytics` object.
+    - In that object, place your full G-Tag in the `gtag` string, e.g. `G-86GVJBTSR8`
 - **Tweet Embed**
   - Turns linked Tweets into full embeds
   - Obeys AfterCoffee dark/light mode settings
