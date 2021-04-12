@@ -1,19 +1,24 @@
 <?php
 class directoryList
 {
-    const version = '1.0';
+    const version = '1.1';
     private function getFiles($dir)
     {
         $folder = $dir . "/*.md";
         foreach (glob($folder) as $filePath) {
             $fileName = substr($filePath, strpos($filePath, "/") + 1, -3);
             $md = file_get_contents($filePath);
-            preg_match('/# (.*?)\n/', $md, $h1)[1];
+            preg_match('/# (.*?)\n/', $md, $h1);
             $option .= "\t<option ";
+            if (!isset($h1[1])) {
+                $title = $fileName;
+            } else {
+                $title = $h1[1];
+            }
             if ($fileName == $GLOBALS["page"]) {
                 $option .= "selected ";
             }
-            $option .= "value=\"?page=" . $fileName . "\">" . $h1[1] . "</option>";
+            $option .= "value=\"?page=" . $fileName . "\">" . $title . "</option>";
         }
         return $option;
     }
