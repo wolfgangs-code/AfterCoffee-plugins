@@ -3,6 +3,9 @@
 # AfterCoffee Plugins
 ### Current Plugins
 
+- **Directory List**
+  - Adds a select box listing every page in the info bar
+  - Works on and (categorizes with optgroup) subfolders
 - **Google Analytics**
   - Instantly adds Google Analytics tracking to your site
   - **Requires editing meta.json**
