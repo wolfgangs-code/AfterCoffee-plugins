@@ -8,6 +8,9 @@ class directoryList
         foreach (glob($folder) as $filePath) {
             $fileName = substr($filePath, strpos($filePath, "/") + 1, -3);
             $md = file_get_contents($filePath);
+            if (preg_match("/<!--(.* NOINDEX .*)-->/", $md)) {
+                continue;
+            }
             preg_match('/# (.*?)\n/', $md, $h1);
             $option .= "\t<option ";
             if (!isset($h1[1])) {
