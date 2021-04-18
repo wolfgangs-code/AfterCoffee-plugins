@@ -6,6 +6,8 @@
 - **Directory List**
   - Adds a select box listing every page in the info bar
   - Works on and (categorizes with optgroup) subfolders
+  - *Hiding a page from being indexed*
+    - Place `<!-- NOINDEX -->` anywhere in the page, (typically before the first line)
 - **Google Analytics**
   - Instantly adds Google Analytics tracking to your site
   - **Requires editing meta.json**
