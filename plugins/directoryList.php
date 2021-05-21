@@ -1,7 +1,7 @@
 <?php
 class directoryList
 {
-    const version = '1.1';
+    const version = '2.0';
     private function getFiles($dir)
     {
         $folder = $dir . "/*.md";

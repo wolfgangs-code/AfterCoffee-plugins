@@ -4,11 +4,11 @@
 	# with full HTML embeds.                                    #
 	#===========================================================#
 class tweetEmbed {
-	const version = '1.0';
+	const version = '2.0';
 	function addHead() {
 		print("<meta name=\"twitter:widgets:border-color\" content=".USERSET["themeColor"].">");
 	}
-	
+
 	function changeText($html) {
 		# Tweer URI example: https://twitter.com/BombosArt/status/1367576818958614530
 		$html = preg_replace("/<a href=\"https?:\/\/twitter\.com\/([\w_]{1,15})\/status\/(\d*)\">.*<\/a>/",
@@ -18,9 +18,14 @@ class tweetEmbed {
 		$html);
 		return $html;
 	}
-	
+
 	function addFooter() {
 		print("<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>");
+	}
+
+	function editorGuide() {
+		$guide = "<b>Tweet Embed:</b> Placing a link to a tweet anywhere will work.";
+		return $guide;
 	}
 }
 ?>

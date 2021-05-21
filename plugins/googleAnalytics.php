@@ -3,6 +3,7 @@
 # This plugin for AfterCoffee adds Google Analytics support #
 #===========================================================#
 class googleAnalytics {
+	const version = '1.0';
 	protected $tag = USERSET["pluginSetting"]["googleAnalytics"]["gtag"];
 	function addHead() {
 		print ("
