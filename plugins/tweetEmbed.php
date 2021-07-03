@@ -4,7 +4,7 @@
 	# with full HTML embeds.                                    #
 	#===========================================================#
 class tweetEmbed {
-	const version = '2.0';
+	const version = '6.0';
 	function addHead() {
 		print("<meta name=\"twitter:widgets:border-color\" content=".USERSET["themeColor"].">");
 	}
@@ -19,8 +19,9 @@ class tweetEmbed {
 		return $html;
 	}
 
-	function addFooter() {
-		print("<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>");
+	function addFooter($html) {
+		$hasTweet = strpos($html, "twitter-tweet");
+		!$hasTweet ?: print("<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>");
 	}
 
 	function editorGuide() {
